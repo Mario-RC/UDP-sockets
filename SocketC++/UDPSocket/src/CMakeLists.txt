@@ -1,0 +1,8 @@
+INCLUDE_DIRECTORIES("${PROJECT_INCLUDE_DIR}")
+
+SET(COMMON_SRCS
+	UDPSocket.cpp)
+
+ADD_EXECUTABLE(server server.cpp UDPServer.cpp ${COMMON_SRCS})	
+ADD_EXECUTABLE(client client.cpp UDPClient.cpp ${COMMON_SRCS})
+
