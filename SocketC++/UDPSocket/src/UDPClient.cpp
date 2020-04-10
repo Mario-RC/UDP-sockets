@@ -28,7 +28,7 @@ void UDPCLient::ComunicationServer() {
 		bzero(buff, BUFFER_SIZE);
 		printf("\nSent Message: ");
 		fgets(buff, BUFFER_SIZE, stdin);
-		clientSock.Send(buff, BUFFER_SIZE, "server");
+		clientSock.Send(buff, "server");
 
 		bzero(buff, BUFFER_SIZE);
 		clientSock.Receive(buff, BUFFER_SIZE);

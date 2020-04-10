@@ -30,7 +30,7 @@ void UDPServer::ComunicationClient() {
 
 		bzero(buff, BUFFER_SIZE);
 		strncpy(buff, "Received", sizeof(buff));
-		serverSock.Send(buff, BUFFER_SIZE, "client");
+		serverSock.Send(buff, "client");
 	}
 	serverSock.Close();
 }

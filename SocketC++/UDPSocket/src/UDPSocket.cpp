@@ -63,7 +63,7 @@ int UDPSocket::Connect() {
 	return 0;
 }
 
-int UDPSocket::Send(char buff[], int buff_len, std::string sideway) {
+int UDPSocket::Send(char buff[], string sideway) {
 
 	if(sock == INVALID_SOCKET)
 		exit(1);

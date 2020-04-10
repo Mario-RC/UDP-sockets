@@ -42,7 +42,7 @@ public:
 	int InitSocket(const char *ip, int port);
 	int Bind();
 	int Connect();
-	int Send(char buff[], int buff_len, std::string sideway);
+	int Send(char buff[], string sideway);
 	int Receive(char buff[], int buff_len);
 	void Close();
 
@@ -51,7 +51,7 @@ private:
 	struct sockaddr_in receive_addr;
 	socklen_t server_addr_len;
 	socklen_t receive_addr_len;
-	int sock, nread, nsent;
+	int sock, buff_len, nread, nsent;
 };
 
 #endif // !defined(AFX_UDPSOCKET_H__F0ACF86D_2491_474D_8E1E_09D4B604D51A__INCLUDED_)

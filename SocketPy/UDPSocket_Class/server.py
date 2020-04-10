@@ -11,9 +11,8 @@ def CommunicationToClient():
     try:
         while True:
             msg = serverSock.receive()
-            if msg:
-                msg = "Received"
-                serverSock.send(msg, sideway='client')
+            msg = "Received"
+            serverSock.send(msg, sideway='client')
                 
     finally:
         serverSock.close()
